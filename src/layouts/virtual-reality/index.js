@@ -14,35 +14,35 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Tooltip from "@mui/material/Tooltip";
-import Icon from "@mui/material/Icon";
+import Grid from '@mui/material/Grid'
+import Tooltip from '@mui/material/Tooltip'
+import Icon from '@mui/material/Icon'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiAvatar from "components/SuiAvatar";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox'
+import SuiAvatar from 'components/SuiAvatar'
+import SuiTypography from 'components/SuiTypography'
+import SuiButton from 'components/SuiButton'
 
 // Soft UI Dashboard PRO React base styles
-import typography from "assets/theme/base/typography";
+import typography from 'assets/theme/base/typography'
 
 // VR dashboards components
-import BaseLayout from "layouts/virtual-reality/components/BaseLayout";
+import BaseLayout from 'layouts/virtual-reality/components/BaseLayout'
 
 // VRInfo dashboards components
-import TodoList from "layouts/virtual-reality/components/TodoList";
-import TodoCard from "layouts/virtual-reality/components/TodoCard";
-import Emails from "layouts/virtual-reality/components/Emails";
-import MediaPlayer from "layouts/virtual-reality/components/MediaPlayer";
-import Messages from "layouts/virtual-reality/components/Messages";
+import TodoList from 'layouts/virtual-reality/components/TodoList'
+import TodoCard from 'layouts/virtual-reality/components/TodoCard'
+import Emails from 'layouts/virtual-reality/components/Emails'
+import MediaPlayer from 'layouts/virtual-reality/components/MediaPlayer'
+import Messages from 'layouts/virtual-reality/components/Messages'
 
 // Images
-import team1 from "assets/images/team-1.jpg";
-import sunCloud from "assets/images/small-logos/icon-sun-cloud.png";
+import team1 from 'assets/images/team-1.jpg'
+import sunCloud from 'assets/images/small-logos/icon-sun-cloud.png'
 
-function VRInfo() {
-  const { d1, h2, fontWeightMedium } = typography;
+function VRInfo () {
+  const { d1, h2, fontWeightMedium } = typography
 
   return (
     <BaseLayout>
@@ -52,13 +52,13 @@ function VRInfo() {
         mt={{ xs: 0, md: 4 }}
         pt={{ xs: 16, md: 32 }}
         pb={{ xs: 0, md: 3 }}
-        sx={{ transform: "scale(1.1)" }}
+        sx={{ transform: 'scale(1.1)' }}
       >
         <Grid container>
           <Grid item xs={12} md={1}>
             <SuiBox
               display="flex"
-              flexDirection={{ xs: "row", md: "column" }}
+              flexDirection={{ xs: 'row', md: 'column' }}
               justifyContent="center"
               alignItems="center"
               px={2}
@@ -70,7 +70,7 @@ function VRInfo() {
                   alt="Profile Picture"
                   size="lg"
                   variant="rounded"
-                  sx={{ cursor: "pointer" }}
+                  sx={{ cursor: 'pointer' }}
                 />
               </Tooltip>
 
@@ -81,7 +81,7 @@ function VRInfo() {
                     iconOnly
                     sx={({ palette: { dark }, borders: { borderRadius } }) => ({
                       color: dark.main,
-                      borderRadius: borderRadius.lg,
+                      borderRadius: borderRadius.lg
                     })}
                   >
                     <Icon>home</Icon>
@@ -95,7 +95,7 @@ function VRInfo() {
                     iconOnly
                     sx={({ palette: { dark }, borders: { borderRadius } }) => ({
                       color: dark.main,
-                      borderRadius: borderRadius.lg,
+                      borderRadius: borderRadius.lg
                     })}
                   >
                     <Icon>search</Icon>
@@ -108,7 +108,7 @@ function VRInfo() {
                   iconOnly
                   sx={({ palette: { dark }, borders: { borderRadius } }) => ({
                     color: dark.main,
-                    borderRadius: borderRadius.lg,
+                    borderRadius: borderRadius.lg
                   })}
                 >
                   <Icon>more_horiz</Icon>
@@ -120,7 +120,7 @@ function VRInfo() {
             <SuiBox
               display="flex"
               justifyContent="space-between"
-              alignItems={{ xs: "center", md: "flex-start" }}
+              alignItems={{ xs: 'center', md: 'flex-start' }}
               ml={{ xs: 1, md: 4 }}
               mt={-1}
             >
@@ -161,7 +161,7 @@ function VRInfo() {
         </Grid>
       </SuiBox>
     </BaseLayout>
-  );
+  )
 }
 
-export default VRInfo;
+export default VRInfo

@@ -13,27 +13,27 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { forwardRef } from "react";
+import { forwardRef } from 'react'
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Custom styles for SuiInput
-import SuiInputRoot from "components/SuiInput/SuiInputRoot";
-import SuiInputWithIconRoot from "components/SuiInput/SuiInputWithIconRoot";
-import SuiInputIconBoxRoot from "components/SuiInput/SuiInputIconBoxRoot";
-import SuiInputIconRoot from "components/SuiInput/SuiInputIconRoot";
+import SuiInputRoot from 'components/SuiInput/SuiInputRoot'
+import SuiInputWithIconRoot from 'components/SuiInput/SuiInputWithIconRoot'
+import SuiInputIconBoxRoot from 'components/SuiInput/SuiInputIconBoxRoot'
+import SuiInputIconRoot from 'components/SuiInput/SuiInputIconRoot'
 
 // Soft UI Dashboard PRO React contexts
-import { useSoftUIController } from "context";
+import { useSoftUIController } from 'context'
 
 const SuiInput = forwardRef(({ size, icon, error, success, disabled, ...rest }, ref) => {
-  let template;
-  const [controller] = useSoftUIController();
-  const { direction } = controller;
-  const iconDirection = icon.direction;
+  let template
+  const [controller] = useSoftUIController()
+  const { direction } = controller
+  const iconDirection = icon.direction
 
-  if (icon.component && icon.direction === "left") {
+  if (icon.component && icon.direction === 'left') {
     template = (
       <SuiInputWithIconRoot ref={ref} ownerState={{ error, success, disabled }}>
         <SuiInputIconBoxRoot ownerState={{ size }}>
@@ -46,8 +46,8 @@ const SuiInput = forwardRef(({ size, icon, error, success, disabled, ...rest }, 
           ownerState={{ size, error, success, iconDirection, direction, disabled }}
         />
       </SuiInputWithIconRoot>
-    );
-  } else if (icon.component && icon.direction === "right") {
+    )
+  } else if (icon.component && icon.direction === 'right') {
     template = (
       <SuiInputWithIconRoot ref={ref} ownerState={{ error, success, disabled }}>
         <SuiInputRoot
@@ -60,36 +60,36 @@ const SuiInput = forwardRef(({ size, icon, error, success, disabled, ...rest }, 
           </SuiInputIconRoot>
         </SuiInputIconBoxRoot>
       </SuiInputWithIconRoot>
-    );
+    )
   } else {
-    template = <SuiInputRoot {...rest} ref={ref} ownerState={{ size, error, success, disabled }} />;
+    template = <SuiInputRoot {...rest} ref={ref} ownerState={{ size, error, success, disabled }} />
   }
 
-  return template;
-});
+  return template
+})
 
 // Setting default values for the props of SuiInput
 SuiInput.defaultProps = {
-  size: "medium",
+  size: 'medium',
   icon: {
     component: false,
-    direction: "none",
+    direction: 'none'
   },
   error: false,
   success: false,
-  disabled: false,
-};
+  disabled: false
+}
 
 // Typechecking props for the SuiInput
 SuiInput.propTypes = {
-  size: PropTypes.oneOf(["small", "medium", "large"]),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
   icon: PropTypes.shape({
     component: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
-    direction: PropTypes.oneOf(["none", "left", "right"]),
+    direction: PropTypes.oneOf(['none', 'left', 'right'])
   }),
   error: PropTypes.bool,
   success: PropTypes.bool,
-  disabled: PropTypes.bool,
-};
+  disabled: PropTypes.bool
+}
 
-export default SuiInput;
+export default SuiInput

@@ -14,24 +14,24 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+import Icon from '@mui/material/Icon'
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
+import SuiButton from 'components/SuiButton'
 
-function Transaction({ color, icon, name, description, value }) {
+function Transaction ({ color, icon, name, description, value }) {
   return (
     <SuiBox key={name} component="li" py={1} pr={2} mb={1}>
       <SuiBox display="flex" justifyContent="space-between" alignItems="center">
         <SuiBox display="flex" alignItems="center">
           <SuiBox mr={2}>
             <SuiButton variant="outlined" color={color} size="small" iconOnly circular>
-              <Icon sx={{ fontWeight: "bold" }}>{icon}</Icon>
+              <Icon sx={{ fontWeight: 'bold' }}>{icon}</Icon>
             </SuiButton>
           </SuiBox>
           <SuiBox display="flex" flexDirection="column">
@@ -48,25 +48,25 @@ function Transaction({ color, icon, name, description, value }) {
         </SuiTypography>
       </SuiBox>
     </SuiBox>
-  );
+  )
 }
 
 // Typechecking props of the Transaction
 Transaction.propTypes = {
   color: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "info",
-    "success",
-    "warning",
-    "error",
-    "light",
-    "dark",
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'error',
+    'light',
+    'dark'
   ]).isRequired,
   icon: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-};
+  value: PropTypes.string.isRequired
+}
 
-export default Transaction;
+export default Transaction

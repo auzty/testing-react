@@ -14,12 +14,12 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Soft UI Dashboard PRO React base styles
-import colors from "assets/theme/base/colors";
+import colors from 'assets/theme/base/colors'
 
-function Settings({ color, size }) {
+function Settings ({ color, size }) {
   return (
     <svg
       width={size}
@@ -58,29 +58,29 @@ function Settings({ color, size }) {
         </g>
       </g>
     </svg>
-  );
+  )
 }
 
 // Setting default values for the props of Settings
 Settings.defaultProps = {
-  color: "dark",
-  size: "16px",
-};
+  color: 'dark',
+  size: '16px'
+}
 
 // Typechecking props for the Settings
 Settings.propTypes = {
   color: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "info",
-    "success",
-    "warning",
-    "error",
-    "dark",
-    "light",
-    "white",
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'error',
+    'dark',
+    'light',
+    'white'
   ]),
-  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-};
+  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+}
 
-export default Settings;
+export default Settings

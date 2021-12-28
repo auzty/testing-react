@@ -14,17 +14,17 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+import Icon from '@mui/material/Icon'
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
+import SuiButton from 'components/SuiButton'
 
-function Bill({ name, company, email, vat, noGutter }) {
+function Bill ({ name, company, email, vat, noGutter }) {
   return (
     <SuiBox
       component="li"
@@ -41,8 +41,8 @@ function Bill({ name, company, email, vat, noGutter }) {
         <SuiBox
           display="flex"
           justifyContent="space-between"
-          alignItems={{ xs: "flex-start", sm: "center" }}
-          flexDirection={{ xs: "column", sm: "row" }}
+          alignItems={{ xs: 'flex-start', sm: 'center' }}
+          flexDirection={{ xs: 'column', sm: 'row' }}
           mb={2}
         >
           <SuiTypography variant="button" fontWeight="medium" textTransform="capitalize">
@@ -84,13 +84,13 @@ function Bill({ name, company, email, vat, noGutter }) {
         </SuiTypography>
       </SuiBox>
     </SuiBox>
-  );
+  )
 }
 
 // Setting default values for the props of Bill
 Bill.defaultProps = {
-  noGutter: false,
-};
+  noGutter: false
+}
 
 // Typechecking props for the Bill
 Bill.propTypes = {
@@ -98,7 +98,7 @@ Bill.propTypes = {
   company: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   vat: PropTypes.string.isRequired,
-  noGutter: PropTypes.bool,
-};
+  noGutter: PropTypes.bool
+}
 
-export default Bill;
+export default Bill

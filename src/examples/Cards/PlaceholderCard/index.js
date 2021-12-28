@@ -14,25 +14,25 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card'
+import Icon from '@mui/material/Icon'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
-function PlaceholderCard({ icon, title, hasBorder, outlined }) {
+function PlaceholderCard ({ icon, title, hasBorder, outlined }) {
   return (
     <Card
       raised
       sx={({ borders: { borderWidth, borderColor } }) => ({
-        height: "100%",
-        backgroundColor: outlined && "transparent",
-        boxShadow: outlined && "none",
-        border: hasBorder || outlined ? `${borderWidth[1]} solid ${borderColor}` : "none",
+        height: '100%',
+        backgroundColor: outlined && 'transparent',
+        boxShadow: outlined && 'none',
+        border: hasBorder || outlined ? `${borderWidth[1]} solid ${borderColor}` : 'none'
       })}
     >
       <SuiBox
@@ -44,7 +44,7 @@ function PlaceholderCard({ icon, title, hasBorder, outlined }) {
         p={3}
       >
         <SuiBox color="secondary" mb={0.5}>
-          <Icon fontSize="default" sx={{ fontWeight: "bold" }}>
+          <Icon fontSize="default" sx={{ fontWeight: 'bold' }}>
             {icon}
           </Icon>
         </SuiBox>
@@ -53,25 +53,25 @@ function PlaceholderCard({ icon, title, hasBorder, outlined }) {
         </SuiTypography>
       </SuiBox>
     </Card>
-  );
+  )
 }
 
 // Setting default values for the props of PlaceholderCard
 PlaceholderCard.defaultProps = {
-  icon: "add",
+  icon: 'add',
   hasBorder: false,
-  outlined: false,
-};
+  outlined: false
+}
 
 // Typechecking props for the PlaceholderCard
 PlaceholderCard.propTypes = {
   icon: PropTypes.node,
   title: PropTypes.shape({
     variant: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
   }).isRequired,
   hasBorder: PropTypes.bool,
-  outlined: PropTypes.bool,
-};
+  outlined: PropTypes.bool
+}
 
-export default PlaceholderCard;
+export default PlaceholderCard

@@ -14,22 +14,22 @@ Coded by www.creative-tim.com
 */
 
 // react-countup components
-import CountUp from "react-countup";
+import CountUp from 'react-countup'
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
 // Soft UI Dashboard PRO React base styles
-import colors from "assets/theme/base/colors";
-import borders from "assets/theme/base/borders";
+import colors from 'assets/theme/base/colors'
+import borders from 'assets/theme/base/borders'
 
-function OutlinedCounterCard({ color, count, title, prefix, suffix }) {
-  const { secondary } = colors;
-  const { borderWidth } = borders;
+function OutlinedCounterCard ({ color, count, title, prefix, suffix }) {
+  const { secondary } = colors
+  const { borderWidth } = borders
 
   return (
     <SuiBox
@@ -57,23 +57,23 @@ function OutlinedCounterCard({ color, count, title, prefix, suffix }) {
         )}
       </SuiTypography>
     </SuiBox>
-  );
+  )
 }
 
 // Setting default values for the props of OutlinedCounterCard
 OutlinedCounterCard.defaultProps = {
-  color: "info",
-  prefix: "",
-  suffix: "",
-};
+  color: 'info',
+  prefix: '',
+  suffix: ''
+}
 
 // Typechecking props for the BlogCard
 OutlinedCounterCard.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  color: PropTypes.oneOf(['primary', 'secondary', 'info', 'success', 'warning', 'error', 'dark']),
   count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   title: PropTypes.string.isRequired,
   prefix: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  suffix: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-};
+  suffix: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
+}
 
-export default OutlinedCounterCard;
+export default OutlinedCounterCard

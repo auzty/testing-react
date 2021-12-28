@@ -14,16 +14,16 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card'
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
 // Billing page components
-import Bill from "layouts/billing/components/Bill";
+import Bill from 'layouts/billing/components/Bill'
 
-function BillingInformation() {
+function BillingInformation () {
   return (
     <Card id="delete-account">
       <SuiBox pt={3} px={2}>
@@ -55,7 +55,7 @@ function BillingInformation() {
         </SuiBox>
       </SuiBox>
     </Card>
-  );
+  )
 }
 
-export default BillingInformation;
+export default BillingInformation

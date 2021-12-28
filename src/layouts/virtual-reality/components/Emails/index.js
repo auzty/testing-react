@@ -14,14 +14,14 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Tooltip from "@mui/material/Tooltip";
+import Card from '@mui/material/Card'
+import Tooltip from '@mui/material/Tooltip'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
-function Emails() {
+function Emails () {
   return (
     <Card>
       <SuiBox display="flex" justifyContent="space-between" p={3} lineHeight={1}>
@@ -35,7 +35,7 @@ function Emails() {
         </Tooltip>
       </SuiBox>
     </Card>
-  );
+  )
 }
 
-export default Emails;
+export default Emails

@@ -14,21 +14,21 @@ Coded by www.creative-tim.com
 */
 
 // react-routers components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 // prop-types is library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiAvatar from "components/SuiAvatar";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
+import SuiAvatar from 'components/SuiAvatar'
+import SuiButton from 'components/SuiButton'
 
-function ProfilesList({ title, profiles }) {
+function ProfilesList ({ title, profiles }) {
   const renderProfiles = profiles.map(({ image, name, description, action }) => (
     <SuiBox key={name} component="li" display="flex" alignItems="center" py={1} mb={1}>
       <SuiBox mr={2}>
@@ -43,11 +43,13 @@ function ProfilesList({ title, profiles }) {
         </SuiTypography>
       </SuiBox>
       <SuiBox ml="auto">
-        {action.type === "internal" ? (
+        {action.type === 'internal'
+          ? (
           <SuiButton component={Link} to={action.route} variant="text" color="info">
             {action.label}
           </SuiButton>
-        ) : (
+            )
+          : (
           <SuiButton
             component="a"
             href={action.route}
@@ -58,13 +60,13 @@ function ProfilesList({ title, profiles }) {
           >
             {action.label}
           </SuiButton>
-        )}
+            )}
       </SuiBox>
     </SuiBox>
-  ));
+  ))
 
   return (
-    <Card sx={{ height: "100%" }}>
+    <Card sx={{ height: '100%' }}>
       <SuiBox pt={2} px={2}>
         <SuiTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           {title}
@@ -76,13 +78,13 @@ function ProfilesList({ title, profiles }) {
         </SuiBox>
       </SuiBox>
     </Card>
-  );
+  )
 }
 
 // Typechecking props for the ProfilesList
 ProfilesList.propTypes = {
   title: PropTypes.string.isRequired,
-  profiles: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+  profiles: PropTypes.arrayOf(PropTypes.object).isRequired
+}
 
-export default ProfilesList;
+export default ProfilesList

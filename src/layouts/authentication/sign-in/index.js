@@ -13,30 +13,30 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useState } from 'react'
 
 // react-router-dom components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 // @mui material components
-import Switch from "@mui/material/Switch";
+import Switch from '@mui/material/Switch'
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiInput from "components/SuiInput";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
+import SuiInput from 'components/SuiInput'
+import SuiButton from 'components/SuiButton'
 
 // Authentication layout components
-import CoverLayout from "layouts/authentication/components/CoverLayout";
+import CoverLayout from 'layouts/authentication/components/CoverLayout'
 
 // Images
-import curved9 from "assets/images/curved-images/curved-6.jpg";
+import curved9 from 'assets/images/curved-images/curved-6.jpg'
 
-function SignIn() {
-  const [rememberMe, setRememberMe] = useState(true);
+function SignIn () {
+  const [rememberMe, setRememberMe] = useState(true)
 
-  const handleSetRememberMe = () => setRememberMe(!rememberMe);
+  const handleSetRememberMe = () => setRememberMe(!rememberMe)
 
   return (
     <CoverLayout
@@ -67,7 +67,7 @@ function SignIn() {
             variant="button"
             fontWeight="regular"
             onClick={handleSetRememberMe}
-            sx={{ cursor: "pointer", userSelect: "none" }}
+            sx={{ cursor: 'pointer', userSelect: 'none' }}
           >
             &nbsp;&nbsp;Remember me
           </SuiTypography>
@@ -79,7 +79,7 @@ function SignIn() {
         </SuiBox>
         <SuiBox mt={3} textAlign="center">
           <SuiTypography variant="button" color="text" fontWeight="regular">
-            Don&apos;t have an account?{" "}
+            Don&apos;t have an account?{' '}
             <SuiTypography
               component={Link}
               to="/authentication/sign-up"
@@ -94,7 +94,7 @@ function SignIn() {
         </SuiBox>
       </SuiBox>
     </CoverLayout>
-  );
+  )
 }
 
-export default SignIn;
+export default SignIn

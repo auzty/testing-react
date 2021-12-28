@@ -14,12 +14,12 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Soft UI Dashboard PRO React base styles
-import colors from "assets/theme/base/colors";
+import colors from 'assets/theme/base/colors'
 
-function CreditCard({ color, size }) {
+function CreditCard ({ color, size }) {
   return (
     <svg
       width={size}
@@ -50,29 +50,29 @@ function CreditCard({ color, size }) {
         </g>
       </g>
     </svg>
-  );
+  )
 }
 
 // Setting default values for the props of CreditCard
 CreditCard.defaultProps = {
-  color: "dark",
-  size: "16px",
-};
+  color: 'dark',
+  size: '16px'
+}
 
 // Typechecking props for the CreditCard
 CreditCard.propTypes = {
   color: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "info",
-    "success",
-    "warning",
-    "error",
-    "dark",
-    "light",
-    "white",
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'error',
+    'dark',
+    'light',
+    'white'
   ]),
-  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-};
+  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+}
 
-export default CreditCard;
+export default CreditCard

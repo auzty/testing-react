@@ -14,33 +14,35 @@ Coded by www.creative-tim.com
 */
 
 // react-router components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Card from "@mui/material/Card";
-import MuiLink from "@mui/material/Link";
+import Card from '@mui/material/Card'
+import MuiLink from '@mui/material/Link'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiAvatar from "components/SuiAvatar";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
+import SuiAvatar from 'components/SuiAvatar'
 
-function DefaultBlogCard({ image, category, title, description, author, action }) {
+function DefaultBlogCard ({ image, category, title, description, author, action }) {
   return (
     <Card>
       <SuiBox mt={2} mx={2}>
-        {action.type === "internal" ? (
+        {action.type === 'internal'
+          ? (
           <Link to={action.route}>
             <SuiBox component="img" src={image} alt={title} width="100%" borderRadius="lg" />
           </Link>
-        ) : (
+            )
+          : (
           <MuiLink href={action.route} target="_blank" rel="noreferrer">
             <SuiBox component="img" src={image} alt={title} width="100%" borderRadius="lg" />
           </MuiLink>
-        )}
+            )}
       </SuiBox>
       <SuiBox pb={3} px={3}>
         {category && (
@@ -55,7 +57,8 @@ function DefaultBlogCard({ image, category, title, description, author, action }
           </SuiTypography>
         )}
         <SuiBox display="block" mt={0.5} mb={1}>
-          {action.type === "internal" ? (
+          {action.type === 'internal'
+            ? (
             <Link to={action.route}>
               <SuiTypography
                 display="inline"
@@ -66,7 +69,8 @@ function DefaultBlogCard({ image, category, title, description, author, action }
                 {title}
               </SuiTypography>
             </Link>
-          ) : (
+              )
+            : (
             <MuiLink href={action.route} target="_blank" rel="noreferrer">
               <SuiTypography
                 display="inline"
@@ -77,7 +81,7 @@ function DefaultBlogCard({ image, category, title, description, author, action }
                 {title}
               </SuiTypography>
             </MuiLink>
-          )}
+              )}
         </SuiBox>
         <SuiTypography variant="body2" component="p" color="text">
           {description}
@@ -97,14 +101,14 @@ function DefaultBlogCard({ image, category, title, description, author, action }
         )}
       </SuiBox>
     </Card>
-  );
+  )
 }
 
 // Setting default props for the DefaultBlogCard
 DefaultBlogCard.defaultProps = {
   category: false,
-  author: false,
-};
+  author: false
+}
 
 // Typechecking props for the DefaultBlogCard
 DefaultBlogCard.propTypes = {
@@ -112,17 +116,17 @@ DefaultBlogCard.propTypes = {
   category: PropTypes.oneOfType([
     PropTypes.shape({
       color: PropTypes.oneOf([
-        "primary",
-        "secondary",
-        "info",
-        "success",
-        "warning",
-        "error",
-        "dark",
+        'primary',
+        'secondary',
+        'info',
+        'success',
+        'warning',
+        'error',
+        'dark'
       ]).isRequired,
-      label: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired
     }),
-    PropTypes.bool,
+    PropTypes.bool
   ]),
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
@@ -130,14 +134,14 @@ DefaultBlogCard.propTypes = {
     PropTypes.shape({
       image: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      date: PropTypes.oneOfType([PropTypes.string, PropTypes.func]).isRequired,
+      date: PropTypes.oneOfType([PropTypes.string, PropTypes.func]).isRequired
     }),
-    PropTypes.bool,
+    PropTypes.bool
   ]),
   action: PropTypes.shape({
-    type: PropTypes.oneOf(["external", "internal"]).isRequired,
-    route: PropTypes.string.isRequired,
-  }).isRequired,
-};
+    type: PropTypes.oneOf(['external', 'internal']).isRequired,
+    route: PropTypes.string.isRequired
+  }).isRequired
+}
 
-export default DefaultBlogCard;
+export default DefaultBlogCard

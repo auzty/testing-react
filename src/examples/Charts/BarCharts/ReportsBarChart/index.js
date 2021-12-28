@@ -13,30 +13,30 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useMemo } from "react";
+import { useMemo } from 'react'
 
 // porp-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // react-chartjs-2 components
-import { Bar } from "react-chartjs-2";
+import { Bar } from 'react-chartjs-2'
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
+import Card from '@mui/material/Card'
+import Grid from '@mui/material/Grid'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
 // Soft UI Dashboard PRO React example components
-import BarReportsChartItem from "examples/Charts/BarCharts/ReportsBarChart/ReportsBarChartItem";
+import BarReportsChartItem from 'examples/Charts/BarCharts/ReportsBarChart/ReportsBarChartItem'
 
 // ReportsBarChart configurations
-import configs from "examples/Charts/BarCharts/ReportsBarChart/configs";
+import configs from 'examples/Charts/BarCharts/ReportsBarChart/configs'
 
-function ReportsBarChart({ color, title, description, chart, items }) {
-  const { data, options } = configs(chart.labels || [], chart.datasets || {});
+function ReportsBarChart ({ color, title, description, chart, items }) {
+  const { data, options } = configs(chart.labels || [], chart.datasets || {})
 
   const renderItems = items.map(({ icon, label, progress }) => (
     <Grid item xs={6} sm={3} key={label}>
@@ -47,10 +47,10 @@ function ReportsBarChart({ color, title, description, chart, items }) {
         progress={{ content: progress.content, percentage: progress.percentage }}
       />
     </Grid>
-  ));
+  ))
 
   return (
-    <Card sx={{ height: "100%" }}>
+    <Card sx={{ height: '100%' }}>
       <SuiBox padding="1rem">
         {useMemo(
           () => (
@@ -85,23 +85,23 @@ function ReportsBarChart({ color, title, description, chart, items }) {
         </SuiBox>
       </SuiBox>
     </Card>
-  );
+  )
 }
 
 // Setting default values for the props of ReportsBarChart
 ReportsBarChart.defaultProps = {
-  color: "dark",
-  description: "",
-  items: [],
-};
+  color: 'dark',
+  description: '',
+  items: []
+}
 
 // Typechecking props for the ReportsBarChart
 ReportsBarChart.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  color: PropTypes.oneOf(['primary', 'secondary', 'info', 'success', 'warning', 'error', 'dark']),
   title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   chart: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.object])).isRequired,
-  items: PropTypes.arrayOf(PropTypes.object),
-};
+  items: PropTypes.arrayOf(PropTypes.object)
+}
 
-export default ReportsBarChart;
+export default ReportsBarChart

@@ -14,40 +14,40 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card'
+import Icon from '@mui/material/Icon'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
 // Images
-import curved14 from "assets/images/curved-images/curved14.jpg";
-import masterCardLogo from "assets/images/logos/mastercard.png";
+import curved14 from 'assets/images/curved-images/curved14.jpg'
+import masterCardLogo from 'assets/images/logos/mastercard.png'
 
-function MasterCard({ color, number, holder, expires }) {
-  const numbers = [...`${number}`];
+function MasterCard ({ color, number, holder, expires }) {
+  const numbers = [...`${number}`]
 
   if (numbers.length < 16 || numbers.length > 16) {
     throw new Error(
       "Invalid value for the prop number, the value for the number prop shouldn't be greater than or less than 16 digits"
-    );
+    )
   }
 
-  const num1 = numbers.slice(0, 4).join("");
-  const num2 = numbers.slice(4, 8).join("");
-  const num3 = numbers.slice(8, 12).join("");
-  const num4 = numbers.slice(12, 16).join("");
+  const num1 = numbers.slice(0, 4).join('')
+  const num2 = numbers.slice(4, 8).join('')
+  const num3 = numbers.slice(8, 12).join('')
+  const num4 = numbers.slice(12, 16).join('')
 
   return (
     <Card
       sx={({
         palette: { gradients },
         functions: { linearGradient, rgba },
-        boxShadows: { xl },
+        boxShadows: { xl }
       }) => ({
         background: gradients[color]
           ? `${linearGradient(
@@ -58,7 +58,7 @@ function MasterCard({ color, number, holder, expires }) {
               rgba(gradients.dark.main, 0.8),
               rgba(gradients.dark.state, 0.8)
             )}, url(${curved14})`,
-        boxShadow: xl,
+        boxShadow: xl
       })}
     >
       <SuiBox p={2}>
@@ -98,20 +98,20 @@ function MasterCard({ color, number, holder, expires }) {
         </SuiBox>
       </SuiBox>
     </Card>
-  );
+  )
 }
 
 // Setting default values for the props of MasterCard
 MasterCard.defaultProps = {
-  color: "dark",
-};
+  color: 'dark'
+}
 
 // Typechecking props for the MasterCard
 MasterCard.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  color: PropTypes.oneOf(['primary', 'secondary', 'info', 'success', 'warning', 'error', 'dark']),
   number: PropTypes.number.isRequired,
   holder: PropTypes.string.isRequired,
-  expires: PropTypes.string.isRequired,
-};
+  expires: PropTypes.string.isRequired
+}
 
-export default MasterCard;
+export default MasterCard

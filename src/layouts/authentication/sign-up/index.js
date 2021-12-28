@@ -13,33 +13,33 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useState } from 'react'
 
 // react-router-dom components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Checkbox from "@mui/material/Checkbox";
+import Card from '@mui/material/Card'
+import Checkbox from '@mui/material/Checkbox'
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiInput from "components/SuiInput";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
+import SuiInput from 'components/SuiInput'
+import SuiButton from 'components/SuiButton'
 
 // Authentication layout components
-import BasicLayout from "layouts/authentication/components/BasicLayout";
-import Socials from "layouts/authentication/components/Socials";
-import Separator from "layouts/authentication/components/Separator";
+import BasicLayout from 'layouts/authentication/components/BasicLayout'
+import Socials from 'layouts/authentication/components/Socials'
+import Separator from 'layouts/authentication/components/Separator'
 
 // Images
-import curved6 from "assets/images/curved-images/curved14.jpg";
+import curved6 from 'assets/images/curved-images/curved14.jpg'
 
-function SignUp() {
-  const [agreement, setAgremment] = useState(true);
+function SignUp () {
+  const [agreement, setAgremment] = useState(true)
 
-  const handleSetAgremment = () => setAgremment(!agreement);
+  const handleSetAgremment = () => setAgremment(!agreement)
 
   return (
     <BasicLayout
@@ -74,7 +74,7 @@ function SignUp() {
                 variant="button"
                 fontWeight="regular"
                 onClick={handleSetAgremment}
-                sx={{ cursor: "poiner", userSelect: "none" }}
+                sx={{ cursor: 'poiner', userSelect: 'none' }}
               >
                 &nbsp;&nbsp;I agree the&nbsp;
               </SuiTypography>
@@ -106,7 +106,7 @@ function SignUp() {
         </SuiBox>
       </Card>
     </BasicLayout>
-  );
+  )
 }
 
-export default SignUp;
+export default SignUp

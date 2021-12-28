@@ -14,13 +14,13 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Divider from "@mui/material/Divider";
+import Divider from '@mui/material/Divider'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
-function Separator() {
+function Separator () {
   return (
     <SuiBox position="relative" py={0.25}>
       <Divider />
@@ -31,14 +31,14 @@ function Separator() {
         left="50%"
         px={1.5}
         lineHeight={1}
-        sx={{ transform: "translate(-50%, -60%)" }}
+        sx={{ transform: 'translate(-50%, -60%)' }}
       >
         <SuiTypography variant="button" fontWeight="medium" color="secondary">
           or
         </SuiTypography>
       </SuiBox>
     </SuiBox>
-  );
+  )
 }
 
-export default Separator;
+export default Separator

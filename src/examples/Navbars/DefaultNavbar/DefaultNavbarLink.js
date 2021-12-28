@@ -14,19 +14,19 @@ Coded by www.creative-tim.com
 */
 
 // react-router-dom components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+import Icon from '@mui/material/Icon'
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
-function DefaultNavbarLink({ icon, name, route, light }) {
+function DefaultNavbarLink ({ icon, name, route, light }) {
   return (
     <>
       <SuiBox
@@ -36,12 +36,12 @@ function DefaultNavbarLink({ icon, name, route, light }) {
         p={1}
         display="flex"
         alignItems="center"
-        sx={{ cursor: "pointer", userSelect: "none" }}
+        sx={{ cursor: 'pointer', userSelect: 'none' }}
       >
         <Icon
           sx={{
             color: ({ palette: { white, secondary } }) => (light ? white.main : secondary.main),
-            verticalAlign: "middle",
+            verticalAlign: 'middle'
           }}
         >
           {icon}
@@ -49,15 +49,15 @@ function DefaultNavbarLink({ icon, name, route, light }) {
         <SuiTypography
           variant="button"
           fontWeight="regular"
-          color={light ? "white" : "dark"}
+          color={light ? 'white' : 'dark'}
           textTransform="capitalize"
-          sx={{ width: "100%", lineHeight: 0 }}
+          sx={{ width: '100%', lineHeight: 0 }}
         >
           &nbsp;{name}
         </SuiTypography>
       </SuiBox>
     </>
-  );
+  )
 }
 
 // Typechecking props for the DefaultNavbarLink
@@ -65,7 +65,7 @@ DefaultNavbarLink.propTypes = {
   icon: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   route: PropTypes.string.isRequired,
-  light: PropTypes.bool.isRequired,
-};
+  light: PropTypes.bool.isRequired
+}
 
-export default DefaultNavbarLink;
+export default DefaultNavbarLink

@@ -14,22 +14,22 @@ Coded by www.creative-tim.com
 */
 
 // react-router-dom components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card'
+import Icon from '@mui/material/Icon'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiBadge from "components/SuiBadge";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
+import SuiBadge from 'components/SuiBadge'
+import SuiButton from 'components/SuiButton'
 
-function DefaultPricingCard({ badge, price, specifications, action }) {
+function DefaultPricingCard ({ badge, price, specifications, action }) {
   const renderSpecifications = specifications.map(({ label, includes }) => (
     <SuiBox key={label} display="flex" alignItems="center" p={1}>
       <SuiBox
@@ -40,19 +40,19 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
         height="1.5rem"
         borderRadius="50%"
         shaodw="md"
-        bgColor={includes ? "success" : "secondary"}
+        bgColor={includes ? 'success' : 'secondary'}
         variant="gradient"
         mr={2}
       >
         <SuiTypography variant="button" color="white" sx={{ lineHeight: 0 }}>
-          <Icon sx={{ fontWeight: "bold" }}>{includes ? "done" : "remove"}</Icon>
+          <Icon sx={{ fontWeight: 'bold' }}>{includes ? 'done' : 'remove'}</Icon>
         </SuiTypography>
       </SuiBox>
       <SuiTypography variant="body2" color="text">
         {label}
       </SuiTypography>
     </SuiBox>
-  ));
+  ))
 
   return (
     <Card>
@@ -76,7 +76,8 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
       </SuiBox>
       <SuiBox pb={3} px={3}>
         {renderSpecifications}
-        {action.type === "internal" ? (
+        {action.type === 'internal'
+          ? (
           <SuiBox mt={3}>
             <SuiButton
               component={Link}
@@ -86,10 +87,11 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
               fullWidth
             >
               {action.label}&nbsp;
-              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+              <Icon sx={{ fontWeight: 'bold' }}>arrow_forward</Icon>
             </SuiButton>
           </SuiBox>
-        ) : (
+            )
+          : (
           <SuiBox mt={3}>
             <SuiButton
               component="a"
@@ -101,50 +103,50 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
               fullWidth
             >
               {action.label}&nbsp;
-              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+              <Icon sx={{ fontWeight: 'bold' }}>arrow_forward</Icon>
             </SuiButton>
           </SuiBox>
-        )}
+            )}
       </SuiBox>
     </Card>
-  );
+  )
 }
 
 // Typechecking props for the DefaultPricingCard
 DefaultPricingCard.propTypes = {
   badge: PropTypes.shape({
     color: PropTypes.oneOf([
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "light",
-      "dark",
+      'primary',
+      'secondary',
+      'info',
+      'success',
+      'warning',
+      'error',
+      'light',
+      'dark'
     ]).isRequired,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired
   }).isRequired,
   price: PropTypes.shape({
     currency: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired
   }).isRequired,
   specifications: PropTypes.arrayOf(PropTypes.object).isRequired,
   action: PropTypes.shape({
-    type: PropTypes.oneOf(["external", "internal"]).isRequired,
+    type: PropTypes.oneOf(['external', 'internal']).isRequired,
     route: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     color: PropTypes.oneOf([
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "light",
-      "dark",
-    ]).isRequired,
-  }).isRequired,
-};
+      'primary',
+      'secondary',
+      'info',
+      'success',
+      'warning',
+      'error',
+      'light',
+      'dark'
+    ]).isRequired
+  }).isRequired
+}
 
-export default DefaultPricingCard;
+export default DefaultPricingCard

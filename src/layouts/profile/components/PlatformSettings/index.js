@@ -13,23 +13,23 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useState } from 'react'
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Switch from "@mui/material/Switch";
+import Card from '@mui/material/Card'
+import Switch from '@mui/material/Switch'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
-function PlatformSettings() {
-  const [followsMe, setFollowsMe] = useState(true);
-  const [answersPost, setAnswersPost] = useState(false);
-  const [mentionsMe, setMentionsMe] = useState(true);
-  const [newLaunches, setNewLaunches] = useState(false);
-  const [productUpdate, setProductUpdate] = useState(true);
-  const [newsletter, setNewsletter] = useState(true);
+function PlatformSettings () {
+  const [followsMe, setFollowsMe] = useState(true)
+  const [answersPost, setAnswersPost] = useState(false)
+  const [mentionsMe, setMentionsMe] = useState(true)
+  const [newLaunches, setNewLaunches] = useState(false)
+  const [productUpdate, setProductUpdate] = useState(true)
+  const [newsletter, setNewsletter] = useState(true)
 
   return (
     <Card>
@@ -109,7 +109,7 @@ function PlatformSettings() {
         </SuiBox>
       </SuiBox>
     </Card>
-  );
+  )
 }
 
-export default PlatformSettings;
+export default PlatformSettings

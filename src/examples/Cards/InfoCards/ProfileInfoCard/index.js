@@ -14,45 +14,45 @@ Coded by www.creative-tim.com
 */
 
 // react-routers components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 // prop-types is library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Divider from "@mui/material/Divider";
-import Tooltip from "@mui/material/Tooltip";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card'
+import Divider from '@mui/material/Divider'
+import Tooltip from '@mui/material/Tooltip'
+import Icon from '@mui/material/Icon'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
 // Soft UI Dashboard PRO React base styles
-import colors from "assets/theme/base/colors";
-import typography from "assets/theme/base/typography";
+import colors from 'assets/theme/base/colors'
+import typography from 'assets/theme/base/typography'
 
-function ProfileInfoCard({ title, description, info, social, action }) {
-  const labels = [];
-  const values = [];
-  const { socialMediaColors } = colors;
-  const { size } = typography;
+function ProfileInfoCard ({ title, description, info, social, action }) {
+  const labels = []
+  const values = []
+  const { socialMediaColors } = colors
+  const { size } = typography
 
   // Convert this form `objectKey` of the object key in to this `object key`
   Object.keys(info).forEach((el) => {
     if (el.match(/[A-Z\s]+/)) {
-      const uppercaseLetter = Array.from(el).find((i) => i.match(/[A-Z]+/));
-      const newElement = el.replace(uppercaseLetter, ` ${uppercaseLetter.toLowerCase()}`);
+      const uppercaseLetter = Array.from(el).find((i) => i.match(/[A-Z]+/))
+      const newElement = el.replace(uppercaseLetter, ` ${uppercaseLetter.toLowerCase()}`)
 
-      labels.push(newElement);
+      labels.push(newElement)
     } else {
-      labels.push(el);
+      labels.push(el)
     }
-  });
+  })
 
   // Push the object values into the values array
-  Object.values(info).forEach((el) => values.push(el));
+  Object.values(info).forEach((el) => values.push(el))
 
   // Render the card info items
   const renderItems = labels.map((label, key) => (
@@ -64,7 +64,7 @@ function ProfileInfoCard({ title, description, info, social, action }) {
         &nbsp;{values[key]}
       </SuiTypography>
     </SuiBox>
-  ));
+  ))
 
   // Render the card social media icons
   const renderSocial = social.map(({ link, icon, color }) => (
@@ -82,10 +82,10 @@ function ProfileInfoCard({ title, description, info, social, action }) {
     >
       {icon}
     </SuiBox>
-  ));
+  ))
 
   return (
-    <Card sx={{ height: "100%" }}>
+    <Card sx={{ height: '100%' }}>
       <SuiBox display="flex" justifyContent="space-between" alignItems="center" pt={2} px={2}>
         <SuiTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           {title}
@@ -116,7 +116,7 @@ function ProfileInfoCard({ title, description, info, social, action }) {
         </SuiBox>
       </SuiBox>
     </Card>
-  );
+  )
 }
 
 // Typechecking props for the ProfileInfoCard
@@ -127,8 +127,8 @@ ProfileInfoCard.propTypes = {
   social: PropTypes.arrayOf(PropTypes.object).isRequired,
   action: PropTypes.shape({
     route: PropTypes.string.isRequired,
-    tooltip: PropTypes.string.isRequired,
-  }).isRequired,
-};
+    tooltip: PropTypes.string.isRequired
+  }).isRequired
+}
 
-export default ProfileInfoCard;
+export default ProfileInfoCard

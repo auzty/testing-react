@@ -14,20 +14,20 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid'
 
 // @mui icons
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import PinterestIcon from "@mui/icons-material/Pinterest";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import FacebookIcon from '@mui/icons-material/Facebook'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import PinterestIcon from '@mui/icons-material/Pinterest'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
-function Footer() {
+function Footer () {
   return (
     <SuiBox component="footer" py={6}>
       <Grid container justifyContent="center">
@@ -84,14 +84,14 @@ function Footer() {
             </SuiBox>
           </SuiBox>
         </Grid>
-        <Grid item xs={12} lg={8} sx={{ textAlign: "center" }}>
+        <Grid item xs={12} lg={8} sx={{ textAlign: 'center' }}>
           <SuiTypography variant="body2" color="secondary">
             Copyright &copy; 2021 Soft by Creative Tim.
           </SuiTypography>
         </Grid>
       </Grid>
     </SuiBox>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

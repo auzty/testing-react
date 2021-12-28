@@ -14,16 +14,16 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+import Icon from '@mui/material/Icon'
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
-function Invoice({ date, id, price, noGutter }) {
+function Invoice ({ date, id, price, noGutter }) {
   return (
     <SuiBox
       component="li"
@@ -46,7 +46,7 @@ function Invoice({ date, id, price, noGutter }) {
         <SuiTypography variant="button" fontWeight="regular" color="text">
           {price}
         </SuiTypography>
-        <SuiBox display="flex" alignItems="center" lineHeight={0} ml={3} sx={{ cursor: "poiner" }}>
+        <SuiBox display="flex" alignItems="center" lineHeight={0} ml={3} sx={{ cursor: 'poiner' }}>
           <Icon fontSize="small">picture_as_pdf</Icon>
           <SuiTypography variant="button" fontWeight="bold">
             &nbsp;PDF
@@ -54,20 +54,20 @@ function Invoice({ date, id, price, noGutter }) {
         </SuiBox>
       </SuiBox>
     </SuiBox>
-  );
+  )
 }
 
 // Setting default values for the props of Invoice
 Invoice.defaultProps = {
-  noGutter: false,
-};
+  noGutter: false
+}
 
 // Typechecking props for the Invoice
 Invoice.propTypes = {
   date: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  noGutter: PropTypes.bool,
-};
+  noGutter: PropTypes.bool
+}
 
-export default Invoice;
+export default Invoice

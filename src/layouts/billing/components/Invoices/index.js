@@ -14,19 +14,19 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card'
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
+import SuiButton from 'components/SuiButton'
 
 // Billing page components
-import Invoice from "layouts/billing/components/Invoice";
+import Invoice from 'layouts/billing/components/Invoice'
 
-function Invoices() {
+function Invoices () {
   return (
-    <Card id="delete-account" sx={{ height: "100%" }}>
+    <Card id="delete-account" sx={{ height: '100%' }}>
       <SuiBox pt={2} px={2} display="flex" justifyContent="space-between" alignItems="center">
         <SuiTypography variant="h6" fontWeight="medium">
           Invoices
@@ -45,7 +45,7 @@ function Invoices() {
         </SuiBox>
       </SuiBox>
     </Card>
-  );
+  )
 }
 
-export default Invoices;
+export default Invoices

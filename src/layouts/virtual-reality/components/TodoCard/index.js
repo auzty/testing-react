@@ -14,15 +14,15 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
-import Tooltip from "@mui/material/Tooltip";
+import Card from '@mui/material/Card'
+import Icon from '@mui/material/Icon'
+import Tooltip from '@mui/material/Tooltip'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
-function TodoCard() {
+function TodoCard () {
   return (
     <Card>
       <SuiBox bgColor="dark" variant="gradient">
@@ -47,16 +47,16 @@ function TodoCard() {
             Meeting
           </SuiTypography>
         </SuiBox>
-        <Tooltip title="Show More" placement="top" sx={{ cursor: "pointer" }}>
+        <Tooltip title="Show More" placement="top" sx={{ cursor: 'pointer' }}>
           <SuiBox textAlign="center" color="white" py={0.5} lineHeight={0}>
-            <Icon sx={{ fontWeight: "bold" }} color="inherit" fontSize="default">
+            <Icon sx={{ fontWeight: 'bold' }} color="inherit" fontSize="default">
               keyboard_arrow_down
             </Icon>
           </SuiBox>
         </Tooltip>
       </SuiBox>
     </Card>
-  );
+  )
 }
 
-export default TodoCard;
+export default TodoCard

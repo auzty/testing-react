@@ -13,29 +13,29 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react'
 
 // react-github-btn
-import GitHubButton from "react-github-btn";
+import GitHubButton from 'react-github-btn'
 
 // @mui material components
-import Divider from "@mui/material/Divider";
-import Switch from "@mui/material/Switch";
-import IconButton from "@mui/material/IconButton";
-import Link from "@mui/material/Link";
-import Icon from "@mui/material/Icon";
+import Divider from '@mui/material/Divider'
+import Switch from '@mui/material/Switch'
+import IconButton from '@mui/material/IconButton'
+import Link from '@mui/material/Link'
+import Icon from '@mui/material/Icon'
 
 // @mui icons
-import TwitterIcon from "@mui/icons-material/Twitter";
-import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from '@mui/icons-material/Twitter'
+import FacebookIcon from '@mui/icons-material/Facebook'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
+import SuiButton from 'components/SuiButton'
 
 // Custom styles for the Configurator
-import ConfiguratorRoot from "examples/Configurator/ConfiguratorRoot";
+import ConfiguratorRoot from 'examples/Configurator/ConfiguratorRoot'
 
 // Soft UI Dashboard PRO React context
 import {
@@ -43,49 +43,49 @@ import {
   setOpenConfigurator,
   setTransparentSidenav,
   setFixedNavbar,
-  setSidenavColor,
-} from "context";
+  setSidenavColor
+} from 'context'
 
-function Configurator() {
-  const [controller, dispatch] = useSoftUIController();
-  const { openConfigurator, transparentSidenav, fixedNavbar, sidenavColor } = controller;
-  const [disabled, setDisabled] = useState(false);
-  const sidenavColors = ["primary", "dark", "info", "success", "warning", "error"];
+function Configurator () {
+  const [controller, dispatch] = useSoftUIController()
+  const { openConfigurator, transparentSidenav, fixedNavbar, sidenavColor } = controller
+  const [disabled, setDisabled] = useState(false)
+  const sidenavColors = ['primary', 'dark', 'info', 'success', 'warning', 'error']
 
   // Use the useEffect hook to change the button state for the sidenav type based on window size.
   useEffect(() => {
     // A function that sets the disabled state of the buttons for the sidenav type.
-    function handleDisabled() {
-      return window.innerWidth > 1200 ? setDisabled(false) : setDisabled(true);
+    function handleDisabled () {
+      return window.innerWidth > 1200 ? setDisabled(false) : setDisabled(true)
     }
 
     // The event listener that's calling the handleDisabled function when resizing the window.
-    window.addEventListener("resize", handleDisabled);
+    window.addEventListener('resize', handleDisabled)
 
     // Call the handleDisabled function to set the state with the initial value.
-    handleDisabled();
+    handleDisabled()
 
     // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleDisabled);
-  }, []);
+    return () => window.removeEventListener('resize', handleDisabled)
+  }, [])
 
-  const handleCloseConfigurator = () => setOpenConfigurator(dispatch, false);
-  const handleTransparentSidenav = () => setTransparentSidenav(dispatch, true);
-  const handleWhiteSidenav = () => setTransparentSidenav(dispatch, false);
-  const handleFixedNavbar = () => setFixedNavbar(dispatch, !fixedNavbar);
+  const handleCloseConfigurator = () => setOpenConfigurator(dispatch, false)
+  const handleTransparentSidenav = () => setTransparentSidenav(dispatch, true)
+  const handleWhiteSidenav = () => setTransparentSidenav(dispatch, false)
+  const handleFixedNavbar = () => setFixedNavbar(dispatch, !fixedNavbar)
 
   // sidenav type buttons styles
   const sidenavTypeButtonsStyles = ({
     functions: { pxToRem },
-    boxShadows: { buttonBoxShadow },
+    boxShadows: { buttonBoxShadow }
   }) => ({
     height: pxToRem(42),
     boxShadow: buttonBoxShadow.main,
 
-    "&:hover, &:focus": {
-      opacity: 1,
-    },
-  });
+    '&:hover, &:focus': {
+      opacity: 1
+    }
+  })
 
   return (
     <ConfiguratorRoot variant="permanent" ownerState={{ openConfigurator }}>
@@ -109,9 +109,9 @@ function Configurator() {
             fontSize: `${size.md} !important`,
             fontWeight: `${fontWeightBold} !important`,
             stroke: dark.main,
-            strokeWidth: "2px",
-            cursor: "pointer",
-            mt: 2,
+            strokeWidth: '2px',
+            cursor: 'pointer',
+            mt: 2
           })}
           onClick={handleCloseConfigurator}
         >
@@ -130,25 +130,25 @@ function Configurator() {
               <IconButton
                 key={color}
                 sx={({ borders: { borderWidth }, palette: { white, dark }, transitions }) => ({
-                  width: "24px",
-                  height: "24px",
+                  width: '24px',
+                  height: '24px',
                   padding: 0,
                   border: `${borderWidth[1]} solid ${white.main}`,
                   borderColor: sidenavColor === color && dark.main,
-                  transition: transitions.create("border-color", {
+                  transition: transitions.create('border-color', {
                     easing: transitions.easing.sharp,
-                    duration: transitions.duration.shorter,
+                    duration: transitions.duration.shorter
                   }),
                   backgroundImage: ({ functions: { linearGradient }, palette: { gradients } }) =>
                     linearGradient(gradients[color].main, gradients[color].state),
 
-                  "&:not(:last-child)": {
-                    mr: 1,
+                  '&:not(:last-child)': {
+                    mr: 1
                   },
 
-                  "&:hover, &:focus, &:active": {
-                    borderColor: dark.main,
-                  },
+                  '&:hover, &:focus, &:active': {
+                    borderColor: dark.main
+                  }
                 })}
                 onClick={() => setSidenavColor(dispatch, color)}
               />
@@ -164,26 +164,26 @@ function Configurator() {
 
           <SuiBox
             sx={{
-              display: "flex",
-              mt: 2,
+              display: 'flex',
+              mt: 2
             }}
           >
             <SuiButton
               color="info"
-              variant={transparentSidenav ? "gradient" : "outlined"}
+              variant={transparentSidenav ? 'gradient' : 'outlined'}
               onClick={handleTransparentSidenav}
               disabled={disabled}
               fullWidth
               sx={{
                 mr: 1,
-                ...sidenavTypeButtonsStyles,
+                ...sidenavTypeButtonsStyles
               }}
             >
               Transparent
             </SuiButton>
             <SuiButton
               color="info"
-              variant={transparentSidenav ? "outlined" : "gradient"}
+              variant={transparentSidenav ? 'outlined' : 'gradient'}
               onClick={handleWhiteSidenav}
               disabled={disabled}
               fullWidth
@@ -270,7 +270,7 @@ function Configurator() {
         </SuiBox>
       </SuiBox>
     </ConfiguratorRoot>
-  );
+  )
 }
 
-export default Configurator;
+export default Configurator

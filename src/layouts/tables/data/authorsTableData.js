@@ -1,16 +1,16 @@
 /* eslint-disable react/prop-types */
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiAvatar from "components/SuiAvatar";
-import SuiBadge from "components/SuiBadge";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
+import SuiAvatar from 'components/SuiAvatar'
+import SuiBadge from 'components/SuiBadge'
 
 // Images
-import team2 from "assets/images/team-2.jpg";
-import team3 from "assets/images/team-3.jpg";
-import team4 from "assets/images/team-4.jpg";
+import team2 from 'assets/images/team-2.jpg'
+import team3 from 'assets/images/team-3.jpg'
+import team4 from 'assets/images/team-4.jpg'
 
-function Author({ image, name, email }) {
+function Author ({ image, name, email }) {
   return (
     <SuiBox display="flex" alignItems="center" px={1} py={0.5}>
       <SuiBox mr={2}>
@@ -25,10 +25,10 @@ function Author({ image, name, email }) {
         </SuiTypography>
       </SuiBox>
     </SuiBox>
-  );
+  )
 }
 
-function Function({ job, org }) {
+function Function ({ job, org }) {
   return (
     <SuiBox display="flex" flexDirection="column">
       <SuiTypography variant="caption" fontWeight="medium" color="text">
@@ -38,16 +38,16 @@ function Function({ job, org }) {
         {org}
       </SuiTypography>
     </SuiBox>
-  );
+  )
 }
 
 export default {
   columns: [
-    { name: "author", align: "left" },
-    { name: "function", align: "left" },
-    { name: "status", align: "center" },
-    { name: "employed", align: "center" },
-    { name: "action", align: "center" },
+    { name: 'author', align: 'left' },
+    { name: 'function', align: 'left' },
+    { name: 'status', align: 'center' },
+    { name: 'employed', align: 'center' },
+    { name: 'action', align: 'center' }
   ],
 
   rows: [
@@ -72,7 +72,7 @@ export default {
         >
           Edit
         </SuiTypography>
-      ),
+      )
     },
     {
       author: <Author image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
@@ -95,7 +95,7 @@ export default {
         >
           Edit
         </SuiTypography>
-      ),
+      )
     },
     {
       author: <Author image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
@@ -118,7 +118,7 @@ export default {
         >
           Edit
         </SuiTypography>
-      ),
+      )
     },
     {
       author: <Author image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
@@ -141,7 +141,7 @@ export default {
         >
           Edit
         </SuiTypography>
-      ),
+      )
     },
     {
       author: <Author image={team2} name="Richard Gran" email="richard@creative-tim.com" />,
@@ -164,7 +164,7 @@ export default {
         >
           Edit
         </SuiTypography>
-      ),
+      )
     },
     {
       author: <Author image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
@@ -187,7 +187,7 @@ export default {
         >
           Edit
         </SuiTypography>
-      ),
-    },
-  ],
-};
+      )
+    }
+  ]
+}

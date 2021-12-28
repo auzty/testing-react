@@ -13,42 +13,42 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useState } from 'react'
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import Card from '@mui/material/Card'
+import Icon from '@mui/material/Icon'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
 // Soft UI Dashboard Materail-UI example components
-import Table from "examples/Tables/Table";
+import Table from 'examples/Tables/Table'
 
 // Data
-import data from "layouts/rtl/components/Projects/data";
+import data from 'layouts/rtl/components/Projects/data'
 
-function Projects() {
-  const { columns, rows } = data();
-  const [menu, setMenu] = useState(null);
+function Projects () {
+  const { columns, rows } = data()
+  const [menu, setMenu] = useState(null)
 
-  const openMenu = ({ currentTarget }) => setMenu(currentTarget);
-  const closeMenu = () => setMenu(null);
+  const openMenu = ({ currentTarget }) => setMenu(currentTarget)
+  const closeMenu = () => setMenu(null)
 
   const renderMenu = (
     <Menu
       id="simple-menu"
       anchorEl={menu}
       anchorOrigin={{
-        vertical: "top",
-        horizontal: "left",
+        vertical: 'top',
+        horizontal: 'left'
       }}
       transformOrigin={{
-        vertical: "top",
-        horizontal: "left",
+        vertical: 'top',
+        horizontal: 'left'
       }}
       open={Boolean(menu)}
       onClose={closeMenu}
@@ -57,7 +57,7 @@ function Projects() {
       <MenuItem onClick={closeMenu}>عمل اخر</MenuItem>
       <MenuItem onClick={closeMenu}>شيء آخر هنا</MenuItem>
     </Menu>
-  );
+  )
 
   return (
     <Card>
@@ -69,9 +69,9 @@ function Projects() {
           <SuiBox display="flex" alignItems="center" lineHeight={0}>
             <Icon
               sx={{
-                fontWeight: "bold",
+                fontWeight: 'bold',
                 color: ({ palette: { info } }) => info.main,
-                mt: -0.5,
+                mt: -0.5
               }}
             >
               done
@@ -82,7 +82,7 @@ function Projects() {
           </SuiBox>
         </SuiBox>
         <SuiBox color="text" px={2}>
-          <Icon sx={{ cursor: "pointer", fontWeight: "bold" }} fontSize="small" onClick={openMenu}>
+          <Icon sx={{ cursor: 'pointer', fontWeight: 'bold' }} fontSize="small" onClick={openMenu}>
             more_vert
           </Icon>
         </SuiBox>
@@ -90,18 +90,18 @@ function Projects() {
       </SuiBox>
       <SuiBox
         sx={{
-          "& .MuiTableRow-root:not(:last-child)": {
-            "& td": {
+          '& .MuiTableRow-root:not(:last-child)': {
+            '& td': {
               borderBottom: ({ borders: { borderWidth, borderColor } }) =>
-                `${borderWidth[1]} solid ${borderColor}`,
-            },
-          },
+                `${borderWidth[1]} solid ${borderColor}`
+            }
+          }
         }}
       >
         <Table columns={columns} rows={rows} />
       </SuiBox>
     </Card>
-  );
+  )
 }
 
-export default Projects;
+export default Projects

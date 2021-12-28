@@ -14,17 +14,17 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card'
+import Icon from '@mui/material/Icon'
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
 // Soft UI Dashboard React example components
-import TimelineItem from "examples/Timeline/TimelineItem";
+import TimelineItem from 'examples/Timeline/TimelineItem'
 
-function OrdersOverview() {
+function OrdersOverview () {
   return (
     <Card className="h-100">
       <SuiBox pt={3} px={3}>
@@ -34,14 +34,14 @@ function OrdersOverview() {
         <SuiBox mt={1} mb={2}>
           <SuiTypography variant="button" color="text" fontWeight="regular">
             <SuiTypography display="inline" variant="body2" verticalAlign="middle">
-              <Icon sx={{ fontWeight: "bold", color: ({ palette: { success } }) => success.main }}>
+              <Icon sx={{ fontWeight: 'bold', color: ({ palette: { success } }) => success.main }}>
                 arrow_upward
               </Icon>
             </SuiTypography>
             &nbsp;
             <SuiTypography variant="button" color="text" fontWeight="medium">
               24%
-            </SuiTypography>{" "}
+            </SuiTypography>{' '}
             this month
           </SuiTypography>
         </SuiBox>
@@ -80,7 +80,7 @@ function OrdersOverview() {
         <TimelineItem color="dark" icon="paid" title="New order #9583120" dateTime="17 DEC" />
       </SuiBox>
     </Card>
-  );
+  )
 }
 
-export default OrdersOverview;
+export default OrdersOverview

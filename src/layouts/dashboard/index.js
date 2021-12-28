@@ -14,37 +14,37 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
+import Grid from '@mui/material/Grid'
+import Icon from '@mui/material/Icon'
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
 // Soft UI Dashboard React example components
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
-import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
-import GradientLineChart from "examples/Charts/LineCharts/GradientLineChart";
+import DashboardLayout from 'examples/LayoutContainers/DashboardLayout'
+import DashboardNavbar from 'examples/Navbars/DashboardNavbar'
+import Footer from 'examples/Footer'
+import MiniStatisticsCard from 'examples/Cards/StatisticsCards/MiniStatisticsCard'
+import ReportsBarChart from 'examples/Charts/BarCharts/ReportsBarChart'
+import GradientLineChart from 'examples/Charts/LineCharts/GradientLineChart'
 
 // Soft UI Dashboard React base styles
-import typography from "assets/theme/base/typography";
+import typography from 'assets/theme/base/typography'
 
 // Dashboard layout components
-import BuildByDevelopers from "layouts/dashboard/components/BuildByDevelopers";
-import WorkWithTheRockets from "layouts/dashboard/components/WorkWithTheRockets";
-import Projects from "layouts/dashboard/components/Projects";
-import OrderOverview from "layouts/dashboard/components/OrderOverview";
+import BuildByDevelopers from 'layouts/dashboard/components/BuildByDevelopers'
+import WorkWithTheRockets from 'layouts/dashboard/components/WorkWithTheRockets'
+import Projects from 'layouts/dashboard/components/Projects'
+import OrderOverview from 'layouts/dashboard/components/OrderOverview'
 
 // Data
-import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
-import gradientLineChartData from "layouts/dashboard/data/gradientLineChartData";
+import reportsBarChartData from 'layouts/dashboard/data/reportsBarChartData'
+import gradientLineChartData from 'layouts/dashboard/data/gradientLineChartData'
 
-function Dashboard() {
-  const { size } = typography;
-  const { chart, items } = reportsBarChartData;
+function Dashboard () {
+  const { size } = typography
+  const { chart, items } = reportsBarChartData
 
   return (
     <DashboardLayout>
@@ -56,34 +56,34 @@ function Dashboard() {
               <MiniStatisticsCard
                 title={{ text: "today's money" }}
                 count="$53,000"
-                percentage={{ color: "success", text: "+55%" }}
-                icon={{ color: "info", component: "paid" }}
+                percentage={{ color: 'success', text: '+55%' }}
+                icon={{ color: 'info', component: 'paid' }}
               />
             </Grid>
             <Grid item xs={12} sm={6} xl={3}>
               <MiniStatisticsCard
                 title={{ text: "today's users" }}
                 count="2,300"
-                percentage={{ color: "success", text: "+3%" }}
-                icon={{ color: "info", component: "public" }}
+                percentage={{ color: 'success', text: '+3%' }}
+                icon={{ color: 'info', component: 'public' }}
               />
             </Grid>
             <Grid item xs={12} sm={6} xl={3}>
               <MiniStatisticsCard
-                title={{ text: "new clients" }}
+                title={{ text: 'new clients' }}
                 count="+3,462"
-                percentage={{ color: "error", text: "-2%" }}
-                icon={{ color: "info", component: "emoji_events" }}
+                percentage={{ color: 'error', text: '-2%' }}
+                icon={{ color: 'info', component: 'emoji_events' }}
               />
             </Grid>
             <Grid item xs={12} sm={6} xl={3}>
               <MiniStatisticsCard
-                title={{ text: "sales" }}
+                title={{ text: 'sales' }}
                 count="$103,430"
-                percentage={{ color: "success", text: "+5%" }}
+                percentage={{ color: 'success', text: '+5%' }}
                 icon={{
-                  color: "info",
-                  component: "shopping_cart",
+                  color: 'info',
+                  component: 'shopping_cart'
                 }}
               />
             </Grid>
@@ -122,7 +122,7 @@ function Dashboard() {
                       <Icon className="font-bold">arrow_upward</Icon>
                     </SuiBox>
                     <SuiTypography variant="button" color="text" fontWeight="medium">
-                      4% more{" "}
+                      4% more{' '}
                       <SuiTypography variant="button" color="text" fontWeight="regular">
                         in 2021
                       </SuiTypography>
@@ -146,7 +146,7 @@ function Dashboard() {
       </SuiBox>
       <Footer />
     </DashboardLayout>
-  );
+  )
 }
 
-export default Dashboard;
+export default Dashboard

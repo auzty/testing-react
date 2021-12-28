@@ -14,14 +14,14 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import { styled } from "@mui/material/styles";
+import { styled } from '@mui/material/styles'
 
-export default styled("span")(({ theme }) => {
-  const { palette, typography, functions, transitions } = theme;
+export default styled('span')(({ theme }) => {
+  const { palette, typography, functions, transitions } = theme
 
-  const { white } = palette;
-  const { size, fontWeightMedium } = typography;
-  const { pxToRem } = functions;
+  const { white } = palette
+  const { size, fontWeightMedium } = typography
+  const { pxToRem } = functions
 
   return {
     color: white.main,
@@ -30,15 +30,15 @@ export default styled("span")(({ theme }) => {
     marginLeft: pxToRem(40),
     fontWeight: fontWeightMedium,
     opacity: 0.5,
-    cursor: "pointer",
+    cursor: 'pointer',
     lineHeight: 0,
-    transition: transitions.create("opacity", {
+    transition: transitions.create('opacity', {
       easing: transitions.easing.easeInOut,
-      duration: transitions.duration.shorter,
+      duration: transitions.duration.shorter
     }),
 
-    "&:hover": {
-      opacity: 1,
-    },
-  };
-});
+    '&:hover': {
+      opacity: 1
+    }
+  }
+})

@@ -14,25 +14,25 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
-import Tooltip from "@mui/material/Tooltip";
+import Card from '@mui/material/Card'
+import Grid from '@mui/material/Grid'
+import Icon from '@mui/material/Icon'
+import Tooltip from '@mui/material/Tooltip'
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
+import SuiButton from 'components/SuiButton'
 
 // Soft UI Dashboard React base styles
-import borders from "assets/theme/base/borders";
+import borders from 'assets/theme/base/borders'
 
 // Images
-import masterCardLogo from "assets/images/logos/mastercard.png";
-import visaLogo from "assets/images/logos/visa.png";
+import masterCardLogo from 'assets/images/logos/mastercard.png'
+import visaLogo from 'assets/images/logos/visa.png'
 
-function PaymentMethod() {
-  const { borderWidth, borderColor } = borders;
+function PaymentMethod () {
+  const { borderWidth, borderColor } = borders
 
   return (
     <Card id="delete-account">
@@ -41,7 +41,7 @@ function PaymentMethod() {
           Payment Method
         </SuiTypography>
         <SuiButton variant="gradient" color="dark">
-          <Icon sx={{ fontWeight: "bold" }}>add</Icon>
+          <Icon sx={{ fontWeight: 'bold' }}>add</Icon>
           &nbsp;add new card
         </SuiButton>
       </SuiBox>
@@ -62,7 +62,7 @@ function PaymentMethod() {
               </SuiTypography>
               <SuiBox ml="auto" lineHeight={0}>
                 <Tooltip title="Edit Card" placement="top">
-                  <Icon sx={{ cursor: "pointer" }} fontSize="small">
+                  <Icon sx={{ cursor: 'pointer' }} fontSize="small">
                     edit
                   </Icon>
                 </Tooltip>
@@ -84,7 +84,7 @@ function PaymentMethod() {
               </SuiTypography>
               <SuiBox ml="auto" lineHeight={0}>
                 <Tooltip title="Edit Card" placement="top">
-                  <Icon sx={{ cursor: "pointer" }} fontSize="small">
+                  <Icon sx={{ cursor: 'pointer' }} fontSize="small">
                     edit
                   </Icon>
                 </Tooltip>
@@ -94,7 +94,7 @@ function PaymentMethod() {
         </Grid>
       </SuiBox>
     </Card>
-  );
+  )
 }
 
-export default PaymentMethod;
+export default PaymentMethod

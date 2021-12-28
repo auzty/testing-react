@@ -14,19 +14,19 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card'
+import Icon from '@mui/material/Icon'
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
 // Images
-import ivancik from "assets/images/ivancik.jpg";
+import ivancik from 'assets/images/ivancik.jpg'
 
-function WorkWithTheRockets() {
+function WorkWithTheRockets () {
   return (
-    <Card sx={{ height: "100%" }}>
+    <Card sx={{ height: '100%' }}>
       <SuiBox position="relative" height="100%" p={2}>
         <SuiBox
           display="flex"
@@ -41,7 +41,7 @@ function WorkWithTheRockets() {
                 rgba(gradients.dark.main, 0.8),
                 rgba(gradients.dark.state, 0.8)
               )}, url(${ivancik})`,
-            backgroundSize: "cover",
+            backgroundSize: 'cover'
           }}
         >
           <SuiBox mb={3} pt={1}>
@@ -62,30 +62,30 @@ function WorkWithTheRockets() {
             color="white"
             fontWeight="bold"
             sx={{
-              mt: "auto",
-              mr: "auto",
-              display: "inline-flex",
-              alignItems: "center",
-              cursor: "pointer",
+              mt: 'auto',
+              mr: 'auto',
+              display: 'inline-flex',
+              alignItems: 'center',
+              cursor: 'pointer',
 
-              "& .material-icons-round": {
-                fontSize: "1.125rem",
-                transform: `translate(2px, -0.5px)`,
-                transition: "transform 0.2s cubic-bezier(0.34,1.61,0.7,1.3)",
+              '& .material-icons-round': {
+                fontSize: '1.125rem',
+                transform: 'translate(2px, -0.5px)',
+                transition: 'transform 0.2s cubic-bezier(0.34,1.61,0.7,1.3)'
               },
 
-              "&:hover .material-icons-round, &:focus  .material-icons-round": {
-                transform: `translate(6px, -0.5px)`,
-              },
+              '&:hover .material-icons-round, &:focus  .material-icons-round': {
+                transform: 'translate(6px, -0.5px)'
+              }
             }}
           >
             اقرأ المستندات
-            <Icon sx={{ fontWeight: "bold" }}>arrow_backward</Icon>
+            <Icon sx={{ fontWeight: 'bold' }}>arrow_backward</Icon>
           </SuiTypography>
         </SuiBox>
       </SuiBox>
     </Card>
-  );
+  )
 }
 
-export default WorkWithTheRockets;
+export default WorkWithTheRockets

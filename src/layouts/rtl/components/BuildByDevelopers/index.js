@@ -14,19 +14,19 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card'
+import Grid from '@mui/material/Grid'
+import Icon from '@mui/material/Icon'
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
 // Images
-import wavesWhite from "assets/images/shapes/waves-white.svg";
-import rocketWhite from "assets/images/illustrations/rocket-white.png";
+import wavesWhite from 'assets/images/shapes/waves-white.svg'
+import rocketWhite from 'assets/images/illustrations/rocket-white.png'
 
-function BuildByDevelopers() {
+function BuildByDevelopers () {
   return (
     <Card>
       <SuiBox p={2}>
@@ -53,29 +53,29 @@ function BuildByDevelopers() {
                 color="text"
                 fontWeight="bold"
                 sx={{
-                  mt: "auto",
-                  mr: "auto",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  cursor: "pointer",
+                  mt: 'auto',
+                  mr: 'auto',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  cursor: 'pointer',
 
-                  "& .material-icons-round": {
-                    fontSize: "1.125rem",
-                    transform: `translate(2px, -0.5px)`,
-                    transition: "transform 0.2s cubic-bezier(0.34,1.61,0.7,1.3)",
+                  '& .material-icons-round': {
+                    fontSize: '1.125rem',
+                    transform: 'translate(2px, -0.5px)',
+                    transition: 'transform 0.2s cubic-bezier(0.34,1.61,0.7,1.3)'
                   },
 
-                  "&:hover .material-icons-round, &:focus  .material-icons-round": {
-                    transform: `translate(6px, -0.5px)`,
-                  },
+                  '&:hover .material-icons-round, &:focus  .material-icons-round': {
+                    transform: 'translate(6px, -0.5px)'
+                  }
                 }}
               >
                 اقرأ المستندات
-                <Icon sx={{ fontWeight: "bold" }}>arrow_backward</Icon>
+                <Icon sx={{ fontWeight: 'bold' }}>arrow_backward</Icon>
               </SuiTypography>
             </SuiBox>
           </Grid>
-          <Grid item xs={12} lg={5} sx={{ position: "relative", ml: "auto" }}>
+          <Grid item xs={12} lg={5} sx={{ position: 'relative', ml: 'auto' }}>
             <SuiBox
               height="100%"
               display="grid"
@@ -101,7 +101,7 @@ function BuildByDevelopers() {
         </Grid>
       </SuiBox>
     </Card>
-  );
+  )
 }
 
-export default BuildByDevelopers;
+export default BuildByDevelopers

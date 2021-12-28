@@ -13,21 +13,21 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { forwardRef } from "react";
+import { forwardRef } from 'react'
 
 // prop-types is a library for typechecking of props.
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import MenuItem from "@mui/material/MenuItem";
-import Icon from "@mui/material/Icon";
+import MenuItem from '@mui/material/MenuItem'
+import Icon from '@mui/material/Icon'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
 // custom styles for the NotificationItem
-import { menuItem, menuImage } from "examples/Items/NotificationItem/styles";
+import { menuItem, menuImage } from 'examples/Items/NotificationItem/styles'
 
 const NotificationItem = forwardRef(({ color, image, title, date, ...rest }, ref) => (
   <MenuItem {...rest} ref={ref} sx={(theme) => menuItem(theme)}>
@@ -50,16 +50,16 @@ const NotificationItem = forwardRef(({ color, image, title, date, ...rest }, ref
         variant="caption"
         color="secondary"
         sx={{
-          display: "flex",
-          alignItems: "center",
-          mt: 0.5,
+          display: 'flex',
+          alignItems: 'center',
+          mt: 0.5
         }}
       >
         <SuiTypography variant="button" color="secondary">
           <Icon
             sx={{
               lineHeight: 1.2,
-              mr: 0.5,
+              mr: 0.5
             }}
           >
             watch_later
@@ -69,28 +69,28 @@ const NotificationItem = forwardRef(({ color, image, title, date, ...rest }, ref
       </SuiTypography>
     </SuiBox>
   </MenuItem>
-));
+))
 
 // Setting default values for the props of NotificationItem
 NotificationItem.defaultProps = {
-  color: "dark",
-};
+  color: 'dark'
+}
 
 // Typechecking props for the NotificationItem
 NotificationItem.propTypes = {
   color: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "info",
-    "success",
-    "warning",
-    "error",
-    "light",
-    "dark",
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'error',
+    'light',
+    'dark'
   ]),
   image: PropTypes.node.isRequired,
   title: PropTypes.arrayOf(PropTypes.string).isRequired,
-  date: PropTypes.string.isRequired,
-};
+  date: PropTypes.string.isRequired
+}
 
-export default NotificationItem;
+export default NotificationItem

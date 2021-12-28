@@ -14,10 +14,10 @@ Coded by www.creative-tim.com
 */
 
 // Soft UI Dashboard PRO React components
-import SuiButton from "components/SuiButton";
-import SuiBox from "components/SuiBox";
+import SuiButton from 'components/SuiButton'
+import SuiBox from 'components/SuiBox'
 
-function Socials() {
+function Socials () {
   return (
     <SuiBox display="flex" justifyContent="center">
       <SuiButton variant="outlined" color="light">
@@ -69,7 +69,7 @@ function Socials() {
         </svg>
       </SuiButton>
     </SuiBox>
-  );
+  )
 }
 
-export default Socials;
+export default Socials

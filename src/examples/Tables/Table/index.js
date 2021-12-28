@@ -13,59 +13,59 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useMemo } from "react";
+import { useMemo } from 'react'
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // uuid is a library for generating unique id
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from 'uuid'
 
 // @mui material components
-import { Table as MuiTable } from "@mui/material";
-import TableBody from "@mui/material/TableBody";
-import TableContainer from "@mui/material/TableContainer";
-import TableRow from "@mui/material/TableRow";
+import { Table as MuiTable } from '@mui/material'
+import TableBody from '@mui/material/TableBody'
+import TableContainer from '@mui/material/TableContainer'
+import TableRow from '@mui/material/TableRow'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiAvatar from "components/SuiAvatar";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiAvatar from 'components/SuiAvatar'
+import SuiTypography from 'components/SuiTypography'
 
 // Soft UI Dashboard PRO React base styles
-import colors from "assets/theme/base/colors";
-import typography from "assets/theme/base/typography";
-import borders from "assets/theme/base/borders";
+import colors from 'assets/theme/base/colors'
+import typography from 'assets/theme/base/typography'
+import borders from 'assets/theme/base/borders'
 
-function Table({ columns, rows }) {
-  const { light } = colors;
-  const { size, fontWeightBold } = typography;
-  const { borderWidth } = borders;
+function Table ({ columns, rows }) {
+  const { light } = colors
+  const { size, fontWeightBold } = typography
+  const { borderWidth } = borders
 
   const renderColumns = columns.map(({ name, align, width }, key) => {
-    let pl;
-    let pr;
+    let pl
+    let pr
 
     if (key === 0) {
-      pl = 3;
-      pr = 3;
+      pl = 3
+      pr = 3
     } else if (key === columns.length - 1) {
-      pl = 3;
-      pr = 3;
+      pl = 3
+      pr = 3
     } else {
-      pl = 1;
-      pr = 1;
+      pl = 1
+      pr = 1
     }
 
     return (
       <SuiBox
         key={name}
         component="th"
-        width={width || "auto"}
+        width={width || 'auto'}
         pt={1.5}
         pb={1.25}
-        pl={align === "left" ? pl : 3}
-        pr={align === "right" ? pr : 3}
+        pl={align === 'left' ? pl : 3}
+        pr={align === 'right' ? pr : 3}
         textAlign={align}
         fontSize={size.xxs}
         fontWeight={fontWeightBold}
@@ -75,14 +75,14 @@ function Table({ columns, rows }) {
       >
         {name.toUpperCase()}
       </SuiBox>
-    );
-  });
+    )
+  })
 
   const renderRows = rows.map((row, key) => {
-    const rowKey = `row-${key}`;
+    const rowKey = `row-${key}`
 
     const tableRow = columns.map(({ name, align }) => {
-      let template;
+      let template
 
       if (Array.isArray(row[name])) {
         template = (
@@ -96,12 +96,12 @@ function Table({ columns, rows }) {
               <SuiBox mr={2}>
                 <SuiAvatar src={row[name][0]} name={row[name][1]} variant="rounded" size="sm" />
               </SuiBox>
-              <SuiTypography variant="button" fontWeight="medium" sx={{ width: "max-content" }}>
+              <SuiTypography variant="button" fontWeight="medium" sx={{ width: 'max-content' }}>
                 {row[name][1]}
               </SuiTypography>
             </SuiBox>
           </SuiBox>
-        );
+        )
       } else {
         template = (
           <SuiBox
@@ -115,19 +115,19 @@ function Table({ columns, rows }) {
               variant="button"
               fontWeight="regular"
               color="secondary"
-              sx={{ display: "inline-block", width: "max-content" }}
+              sx={{ display: 'inline-block', width: 'max-content' }}
             >
               {row[name]}
             </SuiTypography>
           </SuiBox>
-        );
+        )
       }
 
-      return template;
-    });
+      return template
+    })
 
-    return <TableRow key={rowKey}>{tableRow}</TableRow>;
-  });
+    return <TableRow key={rowKey}>{tableRow}</TableRow>
+  })
 
   return useMemo(
     () => (
@@ -141,19 +141,19 @@ function Table({ columns, rows }) {
       </TableContainer>
     ),
     [columns, rows]
-  );
+  )
 }
 
 // Setting default values for the props of Table
 Table.defaultProps = {
   columns: [],
-  rows: [{}],
-};
+  rows: [{}]
+}
 
 // Typechecking props for the Table
 Table.propTypes = {
   columns: PropTypes.arrayOf(PropTypes.object),
-  rows: PropTypes.arrayOf(PropTypes.object),
-};
+  rows: PropTypes.arrayOf(PropTypes.object)
+}
 
-export default Table;
+export default Table

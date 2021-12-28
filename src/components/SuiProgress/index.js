@@ -13,16 +13,16 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { forwardRef } from "react";
+import { forwardRef } from 'react'
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Soft UI Dashboard PRO React components
-import SuiTypography from "components/SuiTypography";
+import SuiTypography from 'components/SuiTypography'
 
 // Custom styles for SuiProgress
-import SuiProgressRoot from "components/SuiProgress/SuiProgressRoot";
+import SuiProgressRoot from 'components/SuiProgress/SuiProgressRoot'
 
 const SuiProgress = forwardRef(({ variant, color, value, label, ...rest }, ref) => (
   <>
@@ -39,31 +39,31 @@ const SuiProgress = forwardRef(({ variant, color, value, label, ...rest }, ref) 
       ownerState={{ color, value, variant }}
     />
   </>
-));
+))
 
 // Setting default values for the props of SuiProgress
 SuiProgress.defaultProps = {
-  variant: "contained",
-  color: "info",
+  variant: 'contained',
+  color: 'info',
   value: 0,
-  label: false,
-};
+  label: false
+}
 
 // Typechecking props for the SuiProgress
 SuiProgress.propTypes = {
-  variant: PropTypes.oneOf(["contained", "gradient"]),
+  variant: PropTypes.oneOf(['contained', 'gradient']),
   color: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "info",
-    "success",
-    "warning",
-    "error",
-    "light",
-    "dark",
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'error',
+    'light',
+    'dark'
   ]),
   value: PropTypes.number,
-  label: PropTypes.bool,
-};
+  label: PropTypes.bool
+}
 
-export default SuiProgress;
+export default SuiProgress

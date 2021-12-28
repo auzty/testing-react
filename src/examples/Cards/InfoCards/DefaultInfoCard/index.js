@@ -14,18 +14,18 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Divider from "@mui/material/Divider";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card'
+import Divider from '@mui/material/Divider'
+import Icon from '@mui/material/Icon'
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox'
+import SuiTypography from 'components/SuiTypography'
 
-function DefaultInfoCard({ color, icon, title, description, value }) {
+function DefaultInfoCard ({ color, icon, title, description, value }) {
   return (
     <Card>
       <SuiBox p={2} mx={3} display="flex" justifyContent="center">
@@ -61,23 +61,23 @@ function DefaultInfoCard({ color, icon, title, description, value }) {
         )}
       </SuiBox>
     </Card>
-  );
+  )
 }
 
 // Setting default values for the props of DefaultInfoCard
 DefaultInfoCard.defaultProps = {
-  color: "info",
-  value: "",
-  description: "",
-};
+  color: 'info',
+  value: '',
+  description: ''
+}
 
 // Typechecking props for the DefaultInfoCard
 DefaultInfoCard.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  color: PropTypes.oneOf(['primary', 'secondary', 'info', 'success', 'warning', 'error', 'dark']),
   icon: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+}
 
-export default DefaultInfoCard;
+export default DefaultInfoCard
