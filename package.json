@@ -46,7 +46,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "start": "node_modules/.bin/serve -s -l tcp://0.0.0.0:3000 build/",
+    "start": "node_modules/.bin/serve -s -l tcp://0.0.0.0:$PORT build/",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
